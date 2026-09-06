@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Arcade - Kolekcja Gier Przeglądarkowych</title>
+    <meta name="description" content="Trzy nowoczesne, darmowe gry webowe w stylistyce sci-fi i cyberpunk: Meteor Surfing, Cyber Snake oraz Voxel Craft 3D. 100% czysty kod w przeglądarce.">
+    <meta name="theme-color" content="#060814">
+
+    <!-- Modern Futuristic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+    <!-- Interactive Background Canvas -->
+    <canvas id="portalCanvas"></canvas>
+
+    <!-- Ambient Glows -->
+    <div class="ambient-glow glow-cyan"></div>
+    <div class="ambient-glow glow-purple"></div>
+
+    <div class="portal-container">
+        <!-- Main Header -->
+        <header class="portal-header">
+            <a href="index.html" class="brand">
+                <span class="brand-icon">⚡</span>
+                <span class="brand-title">CYBER ARCADE</span>
+            </a>
+
+            <div class="header-actions">
+                <button id="soundToggleBtn" class="icon-btn" title="Włącz / Wyłącz efekty dźwiękowe">
+                    🔊 SFX WŁ
+                </button>
+                <a href="#games" class="icon-btn">
+                    🎮 LISTA GIER
+                </a>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-pill">
+                <span class="dot"></span> WEB GAMING NOWEJ GENERACJI
+            </div>
+            <h1 class="hero-title">WEJDŹ DO ŚWIATA GIER PRZEGLĄDARKI</h1>
+            <p class="hero-subtitle">
+                Zbiór dynamicznych, nowoczesnych gier zręcznościowych i sandboxowych stworzonych w czystym JavaScript, HTML5 Canvas i WebGL. Bez pobierania, bez instalacji i bez reklam.
+            </p>
+
+            <div class="hero-badges">
+                <div class="stat-pill">
+                    <span>🕹️</span> 3 Kompletne Gry
+                </div>
+                <div class="stat-pill">
+                    <span>⚡</span> 60 FPS Canvas & WebGL
+                </div>
+                <div class="stat-pill">
+                    <span>📱</span> PC, Tablet & Smartfon
+                </div>
+                <div class="stat-pill">
+                    <span>🛡️</span> 100% Open Source
+                </div>
+            </div>
+        </section>
+
+        <!-- Games Showcase Section -->
+        <section id="games">
+            <div class="section-title-wrap">
+                <h2 class="section-title">DOSTĘPNE GRY</h2>
+                <span class="section-note">Wybierz tytuł i zagraj natychmiast</span>
+            </div>
+
+            <div class="games-grid">
+                <!-- GAME 1: METEOR SURFING -->
+                <article class="game-card card-surfing">
+                    <div>
+                        <div class="card-visual">
+                            <div class="visual-glow"></div>
+                            <div class="visual-art">🚀</div>
+                        </div>
+
+                        <div class="card-tags">
+                            <span class="card-tag">SPACE ARCADE</span>
+                            <span class="card-tag">FIZYKA SKOKU</span>
+                            <span class="card-tag">SYNTHWAVE</span>
+                        </div>
+
+                        <h3 class="card-title">Meteor Surfing</h3>
+                        <div class="card-subtitle">Kosmiczny surfing w pasie asteroid</div>
+
+                        <p class="card-desc">
+                            Przemierzaj głęboką przestrzeń kosmiczną jako surfer skaczący między wirującymi asteroidami. Ładuj siłę odepchnięcia, idealnie wymierzaj moment lądowania i buduj spektakularne combo punktowe!
+                        </p>
+
+                        <ul class="card-features">
+                            <li><span>☄️</span> <b>7 typów asteroid:</b> kryształowe, wulkaniczne, lodowe, bouncing, magnetyczne</li>
+                            <li><span>🛡️</span> <b>Power-upy:</b> Tarcza Energetyczna, Podwójny Skok, Zwolnienie Czasu</li>
+                            <li><span>🎵</span> <b>Dźwięk proceduralny:</b> dynamiczny syntezator audio i cząsteczki gwiezdne</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="surfing.html" class="play-btn">
+                            <span>ZAGRAJ W SURFING</span>
+                            <span>➔</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- GAME 2: CYBER SNAKE -->
+                <article class="game-card card-snake">
+                    <div>
+                        <div class="card-visual">
+                            <div class="visual-glow"></div>
+                            <div class="visual-art">🐍</div>
+                        </div>
+
+                        <div class="card-tags">
+                            <span class="card-tag">CYBERPUNK</span>
+                            <span class="card-tag">NOKIA 3310</span>
+                            <span class="card-tag">POWER-UPS</span>
+                        </div>
+
+                        <h3 class="card-title">Cyber Snake</h3>
+                        <div class="card-subtitle">Nowoczesna ewolucja kultowego węża</div>
+
+                        <p class="card-desc">
+                            Klasyczny hit z telefonów komórkowych w neonowej, futurystycznej szacie graficznej. Niezrównana płynność ruchu 60 FPS, elektryzujące efekty świetlne i dwa tryby rozgrywki dopasowane do Twojego stylu.
+                        </p>
+
+                        <ul class="card-features">
+                            <li><span>🌀</span> <b>2 tryby:</b> Przenikanie przez krawędzie (Nokia) lub Ściany klasyczne</li>
+                            <li><span>💎</span> <b>5 rodzajów owoców:</b> super bonusy, zwolnienie, nożyce i magnes</li>
+                            <li><span>🎮</span> <b>Sterowanie:</b> Strzałki, WASD oraz wirtualny dotykowy D-pad na telefon</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="snake/index.html" class="play-btn">
+                            <span>ZAGRAJ W CYBER SNAKE</span>
+                            <span>➔</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- GAME 3: VOXEL CRAFT 3D -->
+                <article class="game-card card-craft">
+                    <div>
+                        <div class="card-visual">
+                            <div class="visual-glow"></div>
+                            <div class="visual-art">⛏️</div>
+                        </div>
+
+                        <div class="card-tags">
+                            <span class="card-tag">3D SANDBOX</span>
+                            <span class="card-tag">NIESKOŃCZONY ŚWIAT</span>
+                            <span class="card-tag">VOXEL ENGINE</span>
+                        </div>
+
+                        <h3 class="card-title">Voxel Craft 3D</h3>
+                        <div class="card-subtitle">Świat klocków 3D prosto w przeglądarce</div>
+
+                        <p class="card-desc">
+                            Trójwymiarowy symulator budowania i eksploracji napędzany silnikiem WebGL Three.js. Eksploruj nieskończony, generowany na żywo świat, wznawiaj budowle i podziwiaj cykl wschodu i zachodu słońca.
+                        </p>
+
+                        <ul class="card-features">
+                            <li><span>🌍</span> <b>Nieskończona generacja:</b> płynne ładowanie chunków 16×16 wokół gracza</li>
+                            <li><span>🏰</span> <b>Struktury proceduralne:</b> Kamienne Wieże, Leśne Chaty i Ołtarze</li>
+                            <li><span>💥</span> <b>10 typów bloków:</b> w tym wybuchowe TNT, tryb latania (F) oraz cykl dnia</li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <a href="craft/index.html" class="play-btn">
+                            <span>ZAGRAJ W VOXEL CRAFT</span>
+                            <span>➔</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Platform Perks Section -->
+        <section class="platform-perks">
+            <div class="perks-grid">
+                <div class="perk-item">
+                    <div class="perk-icon">⚡</div>
+                    <div class="perk-title">Brak Pobierania</div>
+                    <div class="perk-desc">Gry uruchamiają się natychmiast po kliknięciu w dowolnej przeglądarce na komputerze i telefonie.</div>
+                </div>
+                <div class="perk-item">
+                    <div class="perk-icon">🎵</div>
+                    <div class="perk-title">Audio Synthesizer</div>
+                    <div class="perk-desc">Dźwięki generowane w czasie rzeczywistym przez Web Audio API bez zewnętrznych plików muzycznych.</div>
+                </div>
+                <div class="perk-item">
+                    <div class="perk-icon">🏆</div>
+                    <div class="perk-title">Lokalny Zapis</div>
+                    <div class="perk-desc">Twoje najlepsze wyniki i rekordy punktowe zapisują się bezpiecznie w Twojej przeglądarce.</div>
+                </div>
+                <div class="perk-item">
+                    <div class="perk-icon">🚀</div>
+                    <div class="perk-title">GitHub Pages Ready</div>
+                    <div class="perk-desc">Struktura projektu pozwala opublikować całe portfolio za darmo jednym kliknięciem.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="portal-footer">
+            <div class="footer-links">
+                <a href="surfing.html">🚀 Meteor Surfing</a>
+                <span>•</span>
+                <a href="snake/index.html">🐍 Cyber Snake</a>
+                <span>•</span>
+                <a href="craft/index.html">⛏️ Voxel Craft 3D</a>
+                <span>•</span>
+                <a href="README.md">📖 Dokumentacja</a>
+            </div>
+
+            <div class="license-tag">
+                Cyber Arcade © 2026 • Projekt Open Source na licencji MIT
+            </div>
+        </footer>
+    </div>
+
+    <!-- Interactive Portal Script -->
+    <script src="portal.js"></script>
+</body>
+</html>
