@@ -6,7 +6,8 @@ Kolekcja 3 gier webowych stworzonych w czystym **HTML5 Canvas, WebGL (Three.js) 
 
 ## 🚀 Gry w pakiecie
 
-### 1. [Meteor Surfing](index.html)
+### 1. [Meteor Surfing](surfing.html)
+Portal główny to `index.html`. Bezpośredni link do gry: [surfing.html](surfing.html).
 Zręcznościowa gra kosmiczna w neonowej stylistyce synthwave.
 - **Sterowanie**: Przytrzymaj **LPM / SPACJĘ / Dotyk**, aby naładować skok; puść w odpowiednim momencie obrotu asteroidy.
 - **Mechaniki**: 7 typów asteroid (zwykłe, przyspieszające, kryształowe, niestabilne z tykającym zapalnikiem, magnetyczne, lodowe, ciemne), 4 power-upy (podwójny skok, tarcza, slow-motion, magnes), system combo i natychmiastowy restart.
@@ -14,7 +15,7 @@ Zręcznościowa gra kosmiczna w neonowej stylistyce synthwave.
 ### 2. [Cyber Snake](snake/index.html)
 Nowoczesna redefinicja kultowego węża w cyberpunkowym wydaniu.
 - **Sterowanie**: **Strzałki / WASD** lub ekranowy **D-pad / gesty swipe** na telefonach.
-- **Mechaniki**: Płynna interpolacja ruchu (60+ FPS), 2 tryby gry (Przenikanie Nokia oraz Klasyczne ściany), ulepszenia (Faza Ducha, Kryształy Czasu, Overclock, Slow-mo).
+- **Mechaniki**: Płynna interpolacja ruchu (60+ FPS), 2 tryby gry (Przenikanie krawędzi / Wrap oraz Klasyczne ściany), ulepszenia (Faza Ducha, Kryształy Czasu, Overclock, Slow-mo).
 
 ### 3. [Voxel Craft 3D](craft/index.html)
 W pełni trójwymiarowa gra voxelowa typu sandbox z widokiem pierwszoosobowym.
