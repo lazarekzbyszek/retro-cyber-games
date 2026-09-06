@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Meteor Surfing</title>
+    <!-- Modern Futuristic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- In-Game HUD -->
+    <div id="hud">
+        <div class="hud-top">
+            <div class="stats-panel">
+                <div class="distance-display">
+                    <span id="distanceVal">0</span>
+                    <span class="distance-unit">km</span>
+                </div>
+                <div class="score-display">
+                    PUNKTY: <span id="scoreVal" class="score-number">0</span>
+                </div>
+                <!-- Power-ups tray -->
+                <div id="powerupsTray" class="powerups-tray"></div>
+            </div>
+
+            <div class="combo-container">
+                <div id="comboBadge" class="combo-badge">COMBO x2</div>
+                <div id="comboTimerWrap" class="combo-timer-bar-wrap">
+                    <div id="comboTimerBar" class="combo-timer-bar"></div>
+                </div>
+            </div>
+
+            <div class="top-right">
+                <a href="craft/index.html" class="hud-btn link-btn" title="Zagraj w Voxel Craft 3D">⛏️ CRAFT</a>
+                <a href="snake/index.html" class="hud-btn link-btn" title="Zagraj w Cyber Snake">🐍 SNAKE</a>
+                <button id="soundBtn" class="hud-btn" title="Dźwięk (M)">🔊</button>
+            </div>
+        </div>
+
+        <div class="hud-bottom">
+            <div id="chargeMeterWrap" class="charge-meter-wrap">
+                <div id="chargeMeterFill" class="charge-meter-fill"></div>
+            </div>
+            <div id="tutorialHint" class="tutorial-hint">
+                Przytrzymaj <b>LEWY PRZYCISK MYSZY</b> lub <b>SPACJĘ</b> aby naładować skok • Puść aby skoczyć
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Modal (Restart in < 1s) -->
+    <div id="gameOverModal">
+        <div class="game-over-card">
+            <div id="newRecordBadge" class="new-record-badge" style="display: none;">NOWY REKORD! 🏆</div>
+            <div class="game-over-title">ODLEGŁOŚĆ</div>
+            <div class="final-distance">
+                <span id="finalDistanceVal">0</span>
+                <span class="final-distance-unit">km</span>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-label">REKORD</span>
+                    <span id="bestDistanceVal" class="stat-value gold">0 km</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">WYNIK</span>
+                    <span id="finalScoreVal" class="stat-value">0</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">MAX COMBO</span>
+                    <span id="maxComboVal" class="stat-value">x1</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">ASTEROIDY</span>
+                    <span id="asteroidsLandedVal" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <button id="restartBtn" class="restart-btn">JESZCZE RAZ</button>
+            <div class="restart-hint">Naciśnij [SPACJĘ] lub kliknij, aby zagrać natychmiast</div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+
