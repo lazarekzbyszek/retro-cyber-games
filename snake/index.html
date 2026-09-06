@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Cyber Snake - Nowoczesny Wąż</title>
+    <!-- Futuristic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <!-- Header -->
+        <header class="game-header">
+            <div class="brand-title">
+                <span>🐍</span> CYBER SNAKE
+            </div>
+            <div class="header-actions">
+                <a href="../craft/index.html" class="nav-link-btn" title="Zagraj w Voxel Craft 3D">
+                    ⛏️ CRAFT
+                </a>
+                <a href="../index.html" class="nav-link-btn" title="Zagraj w Meteor Surfing">
+                    🚀 SURFING
+                </a>
+                <button id="soundBtn" class="icon-btn" title="Dźwięk (M)">🔊</button>
+            </div>
+        </header>
+
+        <!-- Scoreboard -->
+        <div class="scoreboard">
+            <div class="score-box">
+                <div class="score-label">PUNKTY</div>
+                <div id="scoreVal" class="score-value green">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">REKORD</div>
+                <div id="bestVal" class="score-value gold">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">DŁUGOŚĆ</div>
+                <div id="lengthVal" class="score-value cyan">3</div>
+            </div>
+            <div class="score-box">
+                <div class="score-label">MNOŻNIK</div>
+                <div id="comboVal" class="score-value">x1</div>
+            </div>
+        </div>
+
+        <!-- Mode Selector -->
+        <div class="mode-selector">
+            <button id="modeWrapBtn" class="mode-tab active">
+                🌀 PRZENIKANIE (NOKIA)
+            </button>
+            <button id="modeClassicBtn" class="mode-tab">
+                🧱 KLASYCZNY (ŚCIANY)
+            </button>
+        </div>
+
+        <!-- Canvas Viewport -->
+        <div class="canvas-wrap">
+            <canvas id="snakeCanvas"></canvas>
+            
+            <!-- Powerup badge -->
+            <div id="powerupPill" class="powerup-pill">
+                <span id="powerupIcon">👻</span>
+                <span id="powerupText">FAZA DUCHA</span>
+                <span id="powerupTimer">5s</span>
+            </div>
+
+            <!-- Game Over Modal -->
+            <div id="gameOverModal">
+                <div class="game-over-card">
+                    <div id="newRecordBadge" class="new-record-badge" style="display: none;">NOWY REKORD! 🏆</div>
+                    <div class="game-over-title">KONIEC TRANSMISJI</div>
+                    <div id="finalScoreVal" class="final-score">0</div>
+
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <span class="stat-label">REKORD</span>
+                            <span id="bestModalVal" class="stat-value gold">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">MAX DŁUGOŚĆ</span>
+                            <span id="maxLengthVal" class="stat-value">3</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">ZJEDZONO</span>
+                            <span id="foodEatenVal" class="stat-value">0</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">TRYB</span>
+                            <span id="modeNameVal" class="stat-value">NOKIA</span>
+                        </div>
+                    </div>
+
+                    <button id="restartBtn" class="restart-btn">ZAGRAJ PONOWNIE</button>
+                    <div class="restart-hint">Naciśnij [SPACJĘ], [ENTER] lub kliknij</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Touch D-Pad -->
+        <div class="touch-controls">
+            <button id="btnUp" class="dpad-btn btn-up">▲</button>
+            <button id="btnLeft" class="dpad-btn btn-left">◀</button>
+            <button id="btnDown" class="dpad-btn btn-down">▼</button>
+            <button id="btnRight" class="dpad-btn btn-right">▶</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+
