@@ -82,7 +82,7 @@ class CyberSnakeGame {
         this.canvas.width = VIRTUAL_RES;
         this.canvas.height = VIRTUAL_RES;
 
-        // Modes: 'WRAP' (Nokia edge pass) or 'CLASSIC' (Walls kill)
+        // Modes: 'WRAP' (Screen wrap / edge pass) or 'CLASSIC' (Walls kill)
         this.mode = 'WRAP';
 
         // State: 'PLAYING', 'GAME_OVER'
@@ -564,7 +564,7 @@ class CyberSnakeGame {
         this.dom.bestModalVal.textContent = this.bestScore.toLocaleString();
         this.dom.maxLengthVal.textContent = this.maxLength;
         this.dom.foodEatenVal.textContent = this.foodEaten;
-        this.dom.modeNameVal.textContent = this.mode === 'WRAP' ? 'NOKIA' : 'ŚCIANY';
+        this.dom.modeNameVal.textContent = this.mode === 'WRAP' ? 'PRZENIKANIE' : 'ŚCIANY';
 
         if (isNewRecord && this.score > 0) {
             this.dom.newRecordBadge.style.display = 'inline-block';
