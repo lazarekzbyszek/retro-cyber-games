@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Voxel Craft 3D - Voxel Sandbox</title>
+    <!-- Modern Futuristic Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <canvas id="webglCanvas"></canvas>
+    <div id="crosshair"></div>
+    <div id="statusToast">Komunikat</div>
+
+    <!-- Top Navigation HUD -->
+    <div id="uiTop">
+        <div class="brand-title">
+            <span>⛏️</span> VOXEL CRAFT
+        </div>
+        <div class="top-actions">
+            <a href="../index.html" class="hud-btn" title="Przejdź do Meteor Surfing">🚀 SURFING</a>
+            <a href="../snake/index.html" class="hud-btn" title="Przejdź do Cyber Snake">🐍 SNAKE</a>
+            <button id="timeBtn" class="hud-btn" title="Przełącz porę dnia">☀️ DZIEŃ</button>
+            <button id="flyBtn" class="hud-btn" title="Tryb latania (Klawisz F)">🪽 LOT: WYŁ</button>
+            <button id="soundBtn" class="hud-btn" title="Dźwięk (Klawisz M)">🔊</button>
+            <button id="helpBtn" class="hud-btn" title="Instrukcja (Klawisz H)">❓ POMOC</button>
+        </div>
+    </div>
+
+    <!-- F3 Coordinates Display -->
+    <div id="coordsDisplay">XYZ: 0 / 12 / 0 (Chunk: 0, 0)</div>
+
+    <!-- Bottom Minecraft Hotbar -->
+    <div id="hotbar">
+        <!-- 9 slots generated or filled -->
+        <div class="hotbar-slot active" data-slot="0">
+            <span class="slot-num">1</span>
+            <canvas class="slot-icon" id="icon0"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="1">
+            <span class="slot-num">2</span>
+            <canvas class="slot-icon" id="icon1"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="2">
+            <span class="slot-num">3</span>
+            <canvas class="slot-icon" id="icon2"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="3">
+            <span class="slot-num">4</span>
+            <canvas class="slot-icon" id="icon3"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="4">
+            <span class="slot-num">5</span>
+            <canvas class="slot-icon" id="icon4"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="5">
+            <span class="slot-num">6</span>
+            <canvas class="slot-icon" id="icon5"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="6">
+            <span class="slot-num">7</span>
+            <canvas class="slot-icon" id="icon6"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="7">
+            <span class="slot-num">8</span>
+            <canvas class="slot-icon" id="icon7"></canvas>
+        </div>
+        <div class="hotbar-slot" data-slot="8">
+            <span class="slot-num">9</span>
+            <canvas class="slot-icon" id="icon8"></canvas>
+        </div>
+    </div>
+
+    <!-- Controls Hint Overlay -->
+    <div id="controlsOverlay">
+        <b>W, A, S, D</b>: Chodzenie &nbsp;|&nbsp; <b>SPACJA</b>: Skok<br>
+        <b>LPM</b>: Wykop blok &nbsp;|&nbsp; <b>PPM</b>: Postaw blok<br>
+        <b>1-9 / Kółko</b>: Wybór bloku &nbsp;|&nbsp; <b>F</b>: Latanie<br>
+        <b>ESC</b>: Zwolnienie myszy &nbsp;|&nbsp; <b>H</b>: Instrukcja
+    </div>
+
+    <!-- Start / Blocker Screen (Pointer Lock capture) -->
+    <div id="blocker">
+        <div class="start-card" id="startCard">
+            <div class="card-title">VOXEL CRAFT 3D</div>
+            <div class="card-subtitle">Eksploruj, buduj i wydobywaj w nieskończonym świecie voxeli!</div>
+
+            <div class="controls-grid">
+                <div class="control-item">
+                    <span class="key-badge">WASD</span>
+                    <span>Poruszanie się</span>
+                </div>
+                <div class="control-item">
+                    <span class="key-badge">SPACJA</span>
+                    <span>Skok / Wznoszenie</span>
+                </div>
+                <div class="control-item">
+                    <span class="key-badge">LPM</span>
+                    <span>Wykop / Rozbij blok</span>
+                </div>
+                <div class="control-item">
+                    <span class="key-badge">PPM</span>
+                    <span>Postaw wybrany blok</span>
+                </div>
+                <div class="control-item">
+                    <span class="key-badge">1 - 9</span>
+                    <span>Pasek wyboru bloku</span>
+                </div>
+                <div class="control-item">
+                    <span class="key-badge">F</span>
+                    <span>Tryb swobodnego latania</span>
+                </div>
+            </div>
+
+            <button class="start-btn" id="startBtn">KLIKNIJ, ABY ZAGRAĆ</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="three.min.js"></script>
+    <script src="audio.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
+
